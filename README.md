@@ -25,3 +25,5 @@ The Web API definitions include:
 
 The .bprelease also includes the following HTTP Basic credential definition:
 * Red Hat PAM Basic Credential
+
+**NOTE:** the Red Hat PAM REST API can support either HTTP Basic or OAuth authentication. These Web API definitions have been configured to support HTTP Basic. If your PAM deployment is configured to utilize OAuth you will need to create a new OAuth credential definition in your Blue Prism environment and modify each of the Web API definitions to use that credential instead of the default HTTP Basic credential.
