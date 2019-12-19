@@ -40,7 +40,7 @@ To install this integration:
 4. After importing the .bprelease, make sure to enter the details of the ***Red Hat PAM Basic Credential*** or set up your token credential if that applies to your environment.
 
 ## Using the Web APIs ##
-As mentioned previously, there is a small example process included in this repository. This process shows the basic process of invoking a handful of methods on a few of the available Web API interfaces.
+As mentioned previously, there is a small example process included in this repository. This shows the basic process of invoking a handful of methods on a few of the available Web API interfaces.
 
 **NOTE:** There is no specfic authentication method exposed by the PAM REST API. Authentication will occur based on HTTP negotiation between the PAM server and Blue Prism. You are only responsible for having a valid credential defined within your Blue Prism environment. Blue Prism will submit that credential automatically when prompted by PAM.
 
