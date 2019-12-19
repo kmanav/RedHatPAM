@@ -35,4 +35,4 @@ To install this integration:
 1. Download the .bprelease to your Blue Prism Interactive Client
 2. From the Blue Prism Interactive Client, select ***File* -> *Import***
 3. Follow the prompts to select and import the .bprelease file.
-4. After importing the .bprelease, make sure to enter the details of the Red Hat PAM Basic Credential or set up your token credential if that applies to your environment.
+4. After importing the .bprelease, make sure to enter the details of the ***Red Hat PAM Basic Credential*** or set up your token credential if that applies to your environment.
