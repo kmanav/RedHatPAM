@@ -1,0 +1,365 @@
+﻿<process name="Red Hat PAM Test" version="1.0" bpversion="6.5.1.14401" narrative="" byrefcollection="true" preferredid="0b13aefc-176e-4715-8595-7e139aac3d3f">
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <stage stageid="dcab4197-3272-4b37-afe5-f6f2f7f47849" name="Start" type="Start">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>3a8ea907-e600-4f14-8fab-8f43362d18cf</onsuccess>
+  </stage>
+  <stage stageid="aac33925-9463-4592-9251-d2356652445f" name="End" type="End">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>420</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="89477c65-fa5c-4c6c-ac3d-0e24dda2822c" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="fefc813c-3b2c-4d46-8177-f97836cc5834" name="Get Server Info" type="Action">
+    <loginhibit onsuccess="true" />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Base URL" friendlyname="Base URL" narrative="The base URL of the KIE server." expr="[Base URL]" />
+      <input type="text" name="Basic Authentication Credential Name" friendlyname="Basic Authentication Credential Name" narrative="The name of the Basic Authentication credential" expr="" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Response Content" friendlyname="Response Content" stage="Response Content" />
+      <output type="text" name="HTTP Status Code" friendlyname="HTTP Status Code" stage="HTTP Status Code" />
+      <output type="collection" name="Response Headers" friendlyname="Response Headers" stage="Response Headers" />
+    </outputs>
+    <onsuccess>4097690f-2f7d-42cf-9cae-9c0eb077bbce</onsuccess>
+    <resource object="Red Hat PAM - Server and Containers" action="getInfo" />
+  </stage>
+  <stage stageid="4097690f-2f7d-42cf-9cae-9c0eb077bbce" name="Get Server State" type="Action">
+    <loginhibit onsuccess="true" />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Base URL" friendlyname="Base URL" narrative="The base URL of the KIE server." expr="[Base URL]" />
+      <input type="text" name="Basic Authentication Credential Name" friendlyname="Basic Authentication Credential Name" narrative="The name of the Basic Authentication credential" expr="" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Response Content" friendlyname="Response Content" stage="Response Content" />
+      <output type="text" name="HTTP Status Code" friendlyname="HTTP Status Code" stage="HTTP Status Code" />
+      <output type="collection" name="Response Headers" friendlyname="Response Headers" stage="Response Headers" />
+    </outputs>
+    <onsuccess>393c8cbb-8487-4dd1-9b37-f0f52ade1e1e</onsuccess>
+    <resource object="Red Hat PAM - Server and Containers" action="getServerState" />
+  </stage>
+  <stage stageid="29a5a4aa-9898-4325-b000-9e99572ad709" name="Response Content" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>270</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2bb0d4e9-f95a-483f-a93a-bd5f921153da" name="HTTP Status Code" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>210</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a5c68f80-9828-4ab8-bd4a-e38404771175" name="Response Headers" type="Collection">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>240</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="029f50b6-5fa5-47da-bd2f-aac71a941e29" name="Create Document" type="Action">
+    <loginhibit onsuccess="true" />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>315</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="requestBody" friendlyname="requestBody" narrative="The JSON payload to be used as the request body." expr="[New Document Request Body]" />
+      <input type="text" name="Base URL" friendlyname="Base URL" narrative="The base URL of the KIE server." expr="[Base URL]" />
+      <input type="text" name="Basic Authentication Credential Name" friendlyname="Basic Authentication Credential Name" narrative="The name of the Basic Authentication credential" expr="" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Response Content" friendlyname="Response Content" stage="Response Content" />
+      <output type="text" name="HTTP Status Code" friendlyname="HTTP Status Code" stage="HTTP Status Code" />
+      <output type="collection" name="Response Headers" friendlyname="Response Headers" stage="Response Headers" />
+    </outputs>
+    <onsuccess>a68988d9-5f36-49d7-b0ef-70535304a1c5</onsuccess>
+    <resource object="Red Hat PAM - Documents" action="createDocument" />
+  </stage>
+  <stage stageid="3a8ea907-e600-4f14-8fab-8f43362d18cf" name="Ready Check" type="Action">
+    <loginhibit onsuccess="true" />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Base URL" friendlyname="Base URL" narrative="The base URL of the KIE server." expr="[Base URL]" />
+      <input type="text" name="Basic Authentication Credential Name" friendlyname="Basic Authentication Credential Name" narrative="The name of the Basic Authentication credential" expr="" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Response Content" friendlyname="Response Content" stage="Response Content" />
+      <output type="text" name="HTTP Status Code" friendlyname="HTTP Status Code" stage="HTTP Status Code" />
+      <output type="collection" name="Response Headers" friendlyname="Response Headers" stage="Response Headers" />
+    </outputs>
+    <onsuccess>3ae7ad32-7fe8-463b-b2dd-9cc4e15cf50a</onsuccess>
+    <resource object="Red Hat PAM - Server and Containers" action="readycheck" />
+  </stage>
+  <stage stageid="bb48af77-2e63-49e4-9e46-6a58ba980439" name="New Document Request Body" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>135</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5c548d58-d14d-4c35-894d-cc065561931c" name="Document Name" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>15</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="bf62519d-6db8-4850-9371-2c16a97a672c" name="Document Link" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>45</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">null</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="566e7207-9d65-4b1f-905b-9e26a6187905" name="Last Mod Date" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>75</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="dda3676e-5a64-4ceb-add0-3059e313949b" name="Document Content" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>105</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">anVzdCB0ZXh0IGNvbnRlbnQ=</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="7a1e80b8-e728-438c-af5d-97c1bfa885e4" name="Variables" type="Block">
+    <narrative>
+    </narrative>
+    <displayx>-270</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>210</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="e683da01-15b3-4f35-8304-c62be0a6993b" name="Output" type="Block">
+    <narrative>
+    </narrative>
+    <displayx>-270</displayx>
+    <displayy>180</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>120</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="CCFFCC" />
+  </stage>
+  <stage stageid="25029918-83cd-4a24-be7f-6cf41cbb1a00" name="Calculate Epoch Timestamp" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>225</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>89308321-77c8-4120-a362-18d78faec83e</onsuccess>
+    <calculation expression="DateDiff(3, MakeDateTime(1, 1, 1970, 0, 0, 0, False), Now()) * 1000 " stage="Last Mod Date" />
+  </stage>
+  <stage stageid="c005a839-3baa-4b88-a1f5-b05ccfdadcca" name="Base URL" type="Data">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">http://localhost:8080</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="89308321-77c8-4120-a362-18d78faec83e" name="Create Document Request Body" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>270</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>029f50b6-5fa5-47da-bd2f-aac71a941e29</onsuccess>
+    <calculation expression="&quot;{&quot; &amp; Chr(34) &amp; &quot;document-name&quot; &amp; Chr(34) &amp; &quot;: &quot; &amp; Chr(34) &amp; [Document Name] &amp; Chr(34) &amp; &quot;, &quot; &amp; Chr(34) &amp; &quot;document-link&quot; &amp; Chr(34) &amp; &quot;: &quot; &amp; [Document Link] &amp; &quot;, &quot; &amp; Chr(34) &amp; &quot;document-size&quot; &amp; Chr(34) &amp; &quot;: 17, &quot; &amp; Chr(34) &amp; &quot;document-last-mod&quot; &amp; Chr(34) &amp; &quot;: {&quot; &amp; Chr(34) &amp; &quot;java.util.Date&quot; &amp; Chr(34) &amp; &quot;: &quot; &amp; [Last Mod Date] &amp; &quot;}, &quot; &amp; Chr(34) &amp; &quot;document-content&quot; &amp; Chr(34) &amp; &quot;: &quot; &amp; Chr(34) &amp; [Document Content] &amp; Chr(34) &amp; &quot;}&quot;" stage="New Document Request Body" />
+  </stage>
+  <stage stageid="3ae7ad32-7fe8-463b-b2dd-9cc4e15cf50a" name="Status OK?" type="Decision">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[HTTP Status Code]=&quot;200&quot;" />
+    <ontrue>fefc813c-3b2c-4d46-8177-f97836cc5834</ontrue>
+    <onfalse>2f3ba353-28e7-4ba2-848b-ca75ad0929bc</onfalse>
+  </stage>
+  <stage stageid="393c8cbb-8487-4dd1-9b37-f0f52ade1e1e" name="Get List of Docs - Before" type="Action">
+    <loginhibit onsuccess="true" />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Base URL" friendlyname="Base URL" narrative="The base URL of the KIE server." expr="[Base URL]" />
+      <input type="text" name="Basic Authentication Credential Name" friendlyname="Basic Authentication Credential Name" narrative="The name of the Basic Authentication credential" expr="" />
+      <input type="number" name="page" friendlyname="page" narrative="optional pagination - at which page to start, defaults to 0 (meaning first)" expr="" />
+      <input type="number" name="pageSize" friendlyname="pageSize" narrative="optional pagination - size of the result, defaults to 10" expr="" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Response Content" friendlyname="Response Content" stage="Response Content" />
+      <output type="text" name="HTTP Status Code" friendlyname="HTTP Status Code" stage="HTTP Status Code" />
+      <output type="collection" name="Response Headers" friendlyname="Response Headers" stage="Response Headers" />
+    </outputs>
+    <onsuccess>74fd907c-0731-49ad-9b72-b8af34fe3285</onsuccess>
+    <resource object="Red Hat PAM - Documents" action="listDocuments" />
+  </stage>
+  <stage stageid="a68988d9-5f36-49d7-b0ef-70535304a1c5" name="Get List of Docs - After" type="Action">
+    <loginhibit onsuccess="true" />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>375</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Base URL" friendlyname="Base URL" narrative="The base URL of the KIE server." expr="[Base URL]" />
+      <input type="text" name="Basic Authentication Credential Name" friendlyname="Basic Authentication Credential Name" narrative="The name of the Basic Authentication credential" expr="" />
+      <input type="number" name="page" friendlyname="page" narrative="optional pagination - at which page to start, defaults to 0 (meaning first)" expr="" />
+      <input type="number" name="pageSize" friendlyname="pageSize" narrative="optional pagination - size of the result, defaults to 10" expr="" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Response Content" friendlyname="Response Content" stage="Response Content" />
+      <output type="text" name="HTTP Status Code" friendlyname="HTTP Status Code" stage="HTTP Status Code" />
+      <output type="collection" name="Response Headers" friendlyname="Response Headers" stage="Response Headers" />
+    </outputs>
+    <onsuccess>aac33925-9463-4592-9251-d2356652445f</onsuccess>
+    <resource object="Red Hat PAM - Documents" action="listDocuments" />
+  </stage>
+  <stage stageid="74fd907c-0731-49ad-9b72-b8af34fe3285" name="Create Doc Name" type="Calculation">
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>180</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>25029918-83cd-4a24-be7f-6cf41cbb1a00</onsuccess>
+    <calculation expression="&quot;My Test Doc - &quot; &amp; Now()" stage="Document Name" />
+  </stage>
+  <stage stageid="23313031-ea25-4411-a881-79e704164a15" name="Create Document" type="Block">
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>150</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>195</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="FFFF99" />
+  </stage>
+  <stage stageid="2f3ba353-28e7-4ba2-848b-ca75ad0929bc" name="End1" type="End">
+    <narrative>
+    </narrative>
+    <displayx>120</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+</process>
