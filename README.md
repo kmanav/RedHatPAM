@@ -48,6 +48,6 @@ The majority of the PAM methods that require submitting some form of data will d
 
 For the full list of Process Server REST API endpoints and descriptions, use one of the following resources:
 * [Execution Server REST API](http://jbpm.org/learn/documentation.html) on the jBPM Documentation page (static)
-* Swagger UI for the Process Server REST API at <div style="display: inline">http://SERVER:PORT/kie-server/docs</div> (dynamic, requires running Process Server)
+* Swagger UI for the Process Server REST API at `http://SERVER:PORT/kie-server/docs` (dynamic, requires running Process Server)
 
 Red Hat's PAM REST API support either JSON or XML format. However, the Web API definitions within Blue Prism have all been designed to default to JSON. Should you desire to use XML instead of JSON, you will need to change the ***content-type*** entry of the **Common Headers** definition of each Web API from ***application/json*** to ***application/xml***.
