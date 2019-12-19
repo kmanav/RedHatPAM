@@ -53,9 +53,11 @@ For the full list of Process Server REST API endpoints and descriptions, use one
 Red Hat's PAM REST API supports either JSON or XML format. However, the Web API definitions within Blue Prism have all been designed to default to JSON. Should you desire to use XML instead of JSON, you will need to change the ***content-type*** entry of the **Common Headers** definition of each Web API from ***application/json*** to ***application/xml***.
 
 ### Red Hat PAM Docker Image ###
-If you would like to set up a local test instance of Red Hat PAM to use when testing this integration, you can find a functional Docker image here:
+If you would like to set up a local test instance of Red Hat PAM to use when testing this integration, you can find a functional JBoss jBPM Server Docker image here:
 
 https://hub.docker.com/r/jboss/jbpm-server-full/
+
+This image contains everything you need to begin testing with your Blue Prism environment including existing user accounts. We recommend setting your Blue Prism credential to the user ***wbadmin*** and the associated password.
 
 ## Support ##
 If you have questions about this integration you can:
