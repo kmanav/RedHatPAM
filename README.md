@@ -1,6 +1,6 @@
 # Red Hat Process Automation Manager (PAM) REST API
 
-This .bprelease file contains 19 Web API implementations that corrospond to the various major elements of the Red Hat Process Automation Manager REST API.
+This `.bprelease` file contains 19 Web API implementations that corrospond to the various major elements of the Red Hat Process Automation Manager REST API.
 
 The Web API definitions include:
 * Red Hat PAM - Case Instance Admin
@@ -23,7 +23,7 @@ The Web API definitions include:
 * Red Hat PAM - Task Instance Admin
 * Red Hat PAM - Task Instances
 
-The .bprelease also includes the following HTTP Basic credential definition:
+The `.bprelease` also includes the following HTTP Basic credential definition:
 * Red Hat PAM Basic Credential
 
 **NOTE:** The PAM server REST API requires HTTP Basic authentication or token-based authentication for the user role **`kie-server`**. To view configured user roles for your Red Hat Process Automation Manager distribution, navigate to **`~/$SERVER_HOME/standalone/configuration/application-roles.properties`** and **`~/application-users.properties`**. 
