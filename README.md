@@ -26,4 +26,6 @@ The Web API definitions include:
 The .bprelease also includes the following HTTP Basic credential definition:
 * Red Hat PAM Basic Credential
 
-**NOTE:** The PAM server REST API requires HTTP Basic authentication or token-based authentication for the user role **`kie-server`**. To view configured user roles for your Red Hat Process Automation Manager distribution, navigate to **`~/$SERVER_HOME/standalone/configuration/application-roles.properties`** and **`~/application-users.properties`**. The Web API definitions in this .bprelease are configured to use an HTTP Basic credential. If your PAM deployment requires the use of a token credential you must define one within your Blue Prism environment and configure each Web API definition to use that token credential in place of the default HTTP Basic credential.
+**NOTE:** The PAM server REST API requires HTTP Basic authentication or token-based authentication for the user role **`kie-server`**. To view configured user roles for your Red Hat Process Automation Manager distribution, navigate to **`~/$SERVER_HOME/standalone/configuration/application-roles.properties`** and **`~/application-users.properties`**. 
+
+The Web API definitions in this .bprelease are configured to use an HTTP Basic credential. If your PAM deployment requires the use of a token credential you must define one within your Blue Prism environment and configure each Web API definition to use that token credential in place of the default HTTP Basic credential.
