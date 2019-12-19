@@ -26,7 +26,7 @@ The Web API definitions include:
 The integration also includes the following HTTP Basic credential definition:
 * Red Hat PAM Basic Credential
 
-These components are contained in the release file **Red Hat PAM REST API vX.X.bprelease**. You will also find a small example process in this repository titled **Red Hat PAM Test.xml**.
+These components are contained in the release file **Red Hat PAM REST API vX.X.bprelease**. You will also find a small example process in this repository titled **BPA Process - Red Hat PAM Test.xml**.
 
 **NOTE:** The PAM server REST API requires HTTP Basic authentication or token-based authentication for the user role **`kie-server`**. To view configured user roles for your Red Hat Process Automation Manager distribution, navigate to **`~/$SERVER_HOME/standalone/configuration/application-roles.properties`** and **`~/application-users.properties`**. 
 
@@ -50,4 +50,9 @@ For the full list of Process Server REST API endpoints and descriptions, use one
 * [Execution Server REST API](https://jbpm.org/learn/documentation.html) on the jBPM Documentation page (static)
 * Swagger UI for the Process Server REST API at `http://SERVER:PORT/kie-server/docs` (dynamic, requires running Process Server)
 
-Red Hat's PAM REST API support either JSON or XML format. However, the Web API definitions within Blue Prism have all been designed to default to JSON. Should you desire to use XML instead of JSON, you will need to change the ***content-type*** entry of the **Common Headers** definition of each Web API from ***application/json*** to ***application/xml***.
+Red Hat's PAM REST API supports either JSON or XML format. However, the Web API definitions within Blue Prism have all been designed to default to JSON. Should you desire to use XML instead of JSON, you will need to change the ***content-type*** entry of the **Common Headers** definition of each Web API from ***application/json*** to ***application/xml***.
+
+## Support ##
+If you have questions about this integration you can:
+* Open a ticket within this repository.
+* Submit your questions to the [Blue Prism DX Developer Community](https://community.blueprism.com/communities/community-home?CommunityKey=9c2bf38f-bb37-4911-b77b-6260ba750957)
