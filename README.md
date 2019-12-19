@@ -29,3 +29,10 @@ The .bprelease also includes the following HTTP Basic credential definition:
 **NOTE:** The PAM server REST API requires HTTP Basic authentication or token-based authentication for the user role **`kie-server`**. To view configured user roles for your Red Hat Process Automation Manager distribution, navigate to **`~/$SERVER_HOME/standalone/configuration/application-roles.properties`** and **`~/application-users.properties`**. 
 
 The Web API definitions in this .bprelease are configured to use an HTTP Basic credential. If your PAM deployment requires the use of a token credential you must define one within your Blue Prism environment, and then you must configure each Web API definition to use that token credential in place of the default HTTP Basic credential.
+
+## Installation ##
+To install this integration:
+1. Download the .bprelease to your Blue Prism Interactive Client
+2. From the Blue Prism Interactive Client, select File -> Import
+3. Follow the prompts to select and import the .bprelease file.
+4. After importing the .bprelease, make sure to enter the details of the Red Hat PAM Basic Credential or set up your token credential if that applies to your environment.
